@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "assistive-vision"
+version = "0.0.1"
+description = "Real-time pavement hazard detection and alerting for blind and low-vision people"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]

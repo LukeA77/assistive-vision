@@ -1,0 +1,5 @@
+# Local (laptop) dependencies for scripts and data tools.
+# GPU training dependencies (ultralytics, torch) are installed on Colab, not here.
+pyyaml>=6.0
+pillow>=10.0
+pytest>=8.0

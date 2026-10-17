@@ -1,0 +1,38 @@
+# --- Data: never committed (datasets are re-downloaded on each Colab runtime) ---
+data/
+*.zip
+
+# --- Raw footage and images: may contain faces or number plates ---
+*.mp4
+*.mov
+*.avi
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.png
+!docs/**/*.jpg
+
+# --- Model weights and training outputs (stored on Hugging Face Hub instead) ---
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.engine
+runs/
+weights/
+
+# --- Secrets ---
+.env
+*.key
+
+# --- Python and environment ---
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Editor and OS ---
+.vscode/
+.DS_Store
+Thumbs.db

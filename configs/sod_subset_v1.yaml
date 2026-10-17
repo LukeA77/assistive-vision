@@ -1,0 +1,17 @@
+# Class subset of SOD v1 for the first fine-tuning run.
+# Keys are the new class names (in this order = new class ids 0, 1, 2 ...).
+# Values list the source SOD class names merged into each new class.
+# Any source class not listed here is dropped from the labels.
+source: data/sod_v1
+output: data/sod_subset_v1
+splits: [train, valid, test]
+
+classes:
+  bollard: [warning_column]     # spherical_roadblock dropped: rare in UK, label errors seen
+  bin: [waste_container]
+  pole: [pole]                  # noisy (any vertical post); re-check after first training run
+
+# Images whose labels contain none of the kept classes are left out.
+# (They would become "background" images, but they still contain people and vehicles,
+# so including them needs a decision on how those are handled — see Phase 1 notes.)
+keep_images_without_kept_classes: false
